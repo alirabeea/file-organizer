@@ -1,8 +1,10 @@
 import os
 import shutil
 from time import sleep
+from decouple import config
 
-os.chdir('DIRECTORYNAME') 
+DIRECTORYPATH = config('DIRECTORYPATH')
+os.chdir(DIRECTORYPATH) 
 curFolder = os.getcwd()
 
 image_formats = ["jpg","png","jpeg","tiff","tif","bmp","eps","webp","heic"]
